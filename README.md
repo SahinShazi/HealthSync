@@ -265,3 +265,5 @@ For questions or support, please refer to the code comments or create an issue i
 ---
 
 **HealthSync 2040** - Revolutionizing healthcare through AI innovation and human-centered design. 🚀 
+
+Live: https://688caea9fd3c3cd4469c498a--euphonious-flan-ff6717.netlify.app/
