@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Doctors - HealthSync 2040</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="doctors.css">
+    <link rel="icon" href="favicon.svg">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-heartbeat"></i>
+                <span>HealthSync 2040</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+                <li><a href="appointments.html" class="nav-link">Book Appointment</a></li>
+                <li><a href="doctors.html" class="nav-link active">AI Doctors</a></li>
+                <li><a href="blog.html" class="nav-link">Blog</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Doctors Header -->
+    <section class="doctors-header">
+        <div class="container">
+            <div class="header-content">
+                <h1>Meet Our AI Doctors</h1>
+                <p>Advanced artificial intelligence specialists trained on millions of medical cases</p>
+                <div class="ai-stats">
+                    <div class="stat">
+                        <div class="stat-number">99.7%</div>
+                        <div class="stat-label">Diagnostic Accuracy</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">50M+</div>
+                        <div class="stat-label">Cases Analyzed</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">24/7</div>
+                        <div class="stat-label">Availability</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Doctors Grid -->
+    <section class="doctors-grid">
+        <div class="container">
+            <div class="doctors-container">
+                <!-- Dr. Neural -->
+                <div class="doctor-card featured">
+                    <div class="doctor-header">
+                        <div class="doctor-avatar">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <div class="doctor-info">
+                            <h2>Dr. Neural</h2>
+                            <p class="doctor-title">Chief AI Physician & General Medicine Specialist</p>
+                            <div class="doctor-rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <span>4.9/5.0 (12,847 reviews)</span>
+                            </div>
+                        </div>
+                        <div class="doctor-status">
+                            <span class="status-badge available">Available Now</span>
+                            <span class="response-time">Avg. Response: 30s</span>
+                        </div>
+                    </div>
+
+                    <div class="doctor-body">
+                        <div class="doctor-description">
+                            <p>Dr. Neural is our flagship AI physician, specializing in comprehensive health diagnostics and treatment planning. Trained on over 50 million medical cases, Dr. Neural combines deep learning algorithms with advanced pattern recognition to provide accurate diagnoses and personalized treatment recommendations.</p>
+                        </div>
+
+                        <div class="doctor-specialties">
+                            <h3>Specializations</h3>
+                            <div class="specialties-grid">
+                                <span class="specialty">General Diagnostics</span>
+                                <span class="specialty">Disease Prevention</span>
+                                <span class="specialty">Treatment Planning</span>
+                                <span class="specialty">Health Monitoring</span>
+                                <span class="specialty">Risk Assessment</span>
+                                <span class="specialty">Emergency Triage</span>
+                            </div>
+                        </div>
+
+                        <div class="doctor-stats">
+                            <div class="stat-item">
+                                <div class="stat-value">99.8%</div>
+                                <div class="stat-label">Accuracy Rate</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-value">15M+</div>
+                                <div class="stat-label">Patients Treated</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-value">150+</div>
+                                <div class="stat-label">Languages</div>
+                            </div>
+                        </div>
+
+                        <div class="doctor-actions">
+                            <a href="appointments.html" class="btn btn-primary">
+                                <i class="fas fa-calendar-plus"></i>
+                                Book Consultation
+                            </a>
+                            <button class="btn btn-secondary" onclick="viewDoctorProfile('dr-neural')">
+                                <i class="fas fa-user-md"></i>
+                                View Profile
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dr. Cardio -->
+                <div class="doctor-card">
+                    <div class="doctor-header">
+                        <div class="doctor-avatar">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <div class="doctor-info">
+                            <h2>Dr. Cardio</h2>
+                            <p class="doctor-title">Cardiovascular Health Specialist</p>
+                            <div class="doctor-rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <span>4.8/5.0 (8,234 reviews)</span>
+                            </div>
+                        </div>
+                        <div class="doctor-status">
+                            <span class="status-badge available">Available Now</span>
+                            <span class="response-time">Avg. Response: 45s</span>
+                        </div>
+                    </div>
+
+                    <div class="doctor-body">
+                        <div class="doctor-description">
+                            <p>Dr. Cardio specializes in cardiovascular health, offering expert analysis of heart conditions, blood pressure monitoring, and ECG interpretation. With advanced algorithms trained on millions of cardiac cases, Dr. Cardio provides precise cardiovascular assessments and preventive care strategies.</p>
+                        </div>
+
+                        <div class="doctor-specialties">
+                            <h3>Specializations</h3>
+                            <div class="specialties-grid">
+                                <span class="specialty">Heart Disease</span>
+                                <span class="specialty">Blood Pressure</span>
+                                <span class="specialty">ECG Analysis</span>
+                                <span class="specialty">Cardiac Risk</span>
+                                <span class="specialty">Exercise Planning</span>
+                                <span class="specialty">Medication Review</span>
+                            </div>
+                        </div>
+
+                        <div class="doctor-stats">
+                            <div class="stat-item">
+                                <div class="stat-value">99.5%</div>
+                                <div class="stat-label">Accuracy Rate</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-value">8.2M+</div>
+                                <div class="stat-label">Patients Treated</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-value">24/7</div>
+                                <div class="stat-label">Monitoring</div>
+                            </div>
+                        </div>
+
+                        <div class="doctor-actions">
+                            <a href="appointments.html" class="btn btn-primary">
+                                <i class="fas fa-calendar-plus"></i>
+                                Book Consultation
+                            </a>
+                            <button class="btn btn-secondary" onclick="viewDoctorProfile('dr-cardio')">
+                                <i class="fas fa-user-md"></i>
+                                View Profile
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dr. Mind -->
+                <div class="doctor-card">
+                    <div class="doctor-header">
+                        <div class="doctor-avatar">
+                            <i class="fas fa-psychology"></i>
+                        </div>
+                        <div class="doctor-info">
+                            <h2>Dr. Mind</h2>
+                            <p class="doctor-title">Mental Health & Wellness Specialist</p>
+                            <div class="doctor-rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <span>4.7/5.0 (6,891 reviews)</span>
+                            </div>
+                        </div>
+                        <div class="doctor-status">
+                            <span class="status-badge available">Available Now</span>
+                            <span class="response-time">Avg. Response: 60s</span>
+                        </div>
+                    </div>
+
+                    <div class="doctor-body">
+                        <div class="doctor-description">
+                            <p>Dr. Mind is a compassionate AI therapist specializing in mental health and emotional wellness. Using advanced natural language processing and psychological assessment algorithms, Dr. Mind provides supportive counseling, anxiety management, and depression screening with empathy and understanding.</p>
+                        </div>
+
+                        <div class="doctor-specialties">
+                            <h3>Specializations</h3>
+                            <div class="specialties-grid">
+                                <span class="specialty">Anxiety Disorders</span>
+                                <span class="specialty">Depression</span>
+                                <span class="specialty">Stress Management</span>
+                                <span class="specialty">Sleep Issues</span>
+                                <span class="specialty">Mood Disorders</span>
+                                <span class="specialty">Coping Strategies</span>
+                            </div>
+                        </div>
+
+                        <div class="doctor-stats">
+                            <div class="stat-item">
+                                <div class="stat-value">94.2%</div>
+                                <div class="stat-label">Patient Satisfaction</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-value">5.6M+</div>
+                                <div class="stat-label">Sessions Conducted</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-value">50+</div>
+                                <div class="stat-label">Therapy Methods</div>
+                            </div>
+                        </div>
+
+                        <div class="doctor-actions">
+                            <a href="appointments.html" class="btn btn-primary">
+                                <i class="fas fa-calendar-plus"></i>
+                                Book Consultation
+                            </a>
+                            <button class="btn btn-secondary" onclick="viewDoctorProfile('dr-mind')">
+                                <i class="fas fa-user-md"></i>
+                                View Profile
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dr. Nutri -->
+                <div class="doctor-card">
+                    <div class="doctor-header">
+                        <div class="doctor-avatar">
+                            <i class="fas fa-apple-alt"></i>
+                        </div>
+                        <div class="doctor-info">
+                            <h2>Dr. Nutri</h2>
+                            <p class="doctor-title">Nutrition & Diet Specialist</p>
+                            <div class="doctor-rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <span>4.6/5.0 (4,567 reviews)</span>
+                            </div>
+                        </div>
+                        <div class="doctor-status">
+                            <span class="status-badge available">Available Now</span>
+                            <span class="response-time">Avg. Response: 40s</span>
+                        </div>
+                    </div>
+
+                    <div class="doctor-body">
+                        <div class="doctor-description">
+                            <p>Dr. Nutri is an expert in nutrition science and dietary planning. Using comprehensive databases of nutritional information and personalized health data, Dr. Nutri creates customized meal plans, supplement recommendations, and dietary strategies for optimal health and wellness.</p>
+                        </div>
+
+                        <div class="doctor-specialties">
+                            <h3>Specializations</h3>
+                            <div class="specialties-grid">
+                                <span class="specialty">Meal Planning</span>
+                                <span class="specialty">Weight Management</span>
+                                <span class="specialty">Supplements</span>
+                                <span class="specialty">Food Allergies</span>
+                                <span class="specialty">Sports Nutrition</span>
+                                <span class="specialty">Dietary Restrictions</span>
+                            </div>
+                        </div>
+
+                        <div class="doctor-stats">
+                            <div class="stat-item">
+                                <div class="stat-value">96.8%</div>
+                                <div class="stat-label">Success Rate</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-value">3.2M+</div>
+                                <div class="stat-label">Plans Created</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-value">10K+</div>
+                                <div class="stat-label">Food Database</div>
+                            </div>
+                        </div>
+
+                        <div class="doctor-actions">
+                            <a href="appointments.html" class="btn btn-primary">
+                                <i class="fas fa-calendar-plus"></i>
+                                Book Consultation
+                            </a>
+                            <button class="btn btn-secondary" onclick="viewDoctorProfile('dr-nutri')">
+                                <i class="fas fa-user-md"></i>
+                                View Profile
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dr. Sleep -->
+                <div class="doctor-card">
+                    <div class="doctor-header">
+                        <div class="doctor-avatar">
+                            <i class="fas fa-bed"></i>
+                        </div>
+                        <div class="doctor-info">
+                            <h2>Dr. Sleep</h2>
+                            <p class="doctor-title">Sleep Medicine & Analysis Specialist</p>
+                            <div class="doctor-rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <span>4.5/5.0 (3,234 reviews)</span>
+                            </div>
+                        </div>
+                        <div class="doctor-status">
+                            <span class="status-badge available">Available Now</span>
+                            <span class="response-time">Avg. Response: 35s</span>
+                        </div>
+                    </div>
+
+                    <div class="doctor-body">
+                        <div class="doctor-description">
+                            <p>Dr. Sleep specializes in sleep medicine and analysis, helping patients understand and improve their sleep patterns. Using advanced sleep tracking algorithms and circadian rhythm analysis, Dr. Sleep provides personalized recommendations for better sleep quality and sleep disorder management.</p>
+                        </div>
+
+                        <div class="doctor-specialties">
+                            <h3>Specializations</h3>
+                            <div class="specialties-grid">
+                                <span class="specialty">Sleep Analysis</span>
+                                <span class="specialty">Insomnia</span>
+                                <span class="specialty">Sleep Apnea</span>
+                                <span class="specialty">Circadian Rhythm</span>
+                                <span class="specialty">Sleep Hygiene</span>
+                                <span class="specialty">Dream Analysis</span>
+                            </div>
+                        </div>
+
+                        <div class="doctor-stats">
+                            <div class="stat-item">
+                                <div class="stat-value">91.3%</div>
+                                <div class="stat-label">Improvement Rate</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-value">2.1M+</div>
+                                <div class="stat-label">Sleep Studies</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-value">8h</div>
+                                <div class="stat-label">Avg. Analysis</div>
+                            </div>
+                        </div>
+
+                        <div class="doctor-actions">
+                            <a href="appointments.html" class="btn btn-primary">
+                                <i class="fas fa-calendar-plus"></i>
+                                Book Consultation
+                            </a>
+                            <button class="btn btn-secondary" onclick="viewDoctorProfile('dr-sleep')">
+                                <i class="fas fa-user-md"></i>
+                                View Profile
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dr. Fitness -->
+                <div class="doctor-card">
+                    <div class="doctor-header">
+                        <div class="doctor-avatar">
+                            <i class="fas fa-dumbbell"></i>
+                        </div>
+                        <div class="doctor-info">
+                            <h2>Dr. Fitness</h2>
+                            <p class="doctor-title">Exercise & Physical Therapy Specialist</p>
+                            <div class="doctor-rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <span>4.4/5.0 (2,891 reviews)</span>
+                            </div>
+                        </div>
+                        <div class="doctor-status">
+                            <span class="status-badge available">Available Now</span>
+                            <span class="response-time">Avg. Response: 50s</span>
+                        </div>
+                    </div>
+
+                    <div class="doctor-body">
+                        <div class="doctor-description">
+                            <p>Dr. Fitness is an expert in exercise science and physical therapy, creating personalized workout plans and rehabilitation programs. Using biomechanical analysis and fitness tracking data, Dr. Fitness helps patients achieve their fitness goals while preventing injuries and optimizing performance.</p>
+                        </div>
+
+                        <div class="doctor-specialties">
+                            <h3>Specializations</h3>
+                            <div class="specialties-grid">
+                                <span class="specialty">Workout Plans</span>
+                                <span class="specialty">Injury Prevention</span>
+                                <span class="specialty">Rehabilitation</span>
+                                <span class="specialty">Strength Training</span>
+                                <span class="specialty">Cardio Fitness</span>
+                                <span class="specialty">Sports Medicine</span>
+                            </div>
+                        </div>
+
+                        <div class="doctor-stats">
+                            <div class="stat-item">
+                                <div class="stat-value">89.7%</div>
+                                <div class="stat-label">Goal Achievement</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-value">1.8M+</div>
+                                <div class="stat-label">Plans Created</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-value">500+</div>
+                                <div class="stat-label">Exercise Types</div>
+                            </div>
+                        </div>
+
+                        <div class="doctor-actions">
+                            <a href="appointments.html" class="btn btn-primary">
+                                <i class="fas fa-calendar-plus"></i>
+                                Book Consultation
+                            </a>
+                            <button class="btn btn-secondary" onclick="viewDoctorProfile('dr-fitness')">
+                                <i class="fas fa-user-md"></i>
+                                View Profile
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Technology Section -->
+    <section class="ai-technology">
+        <div class="container">
+            <div class="tech-content">
+                <h2>Advanced AI Technology</h2>
+                <p>Our AI doctors are powered by cutting-edge machine learning algorithms and neural networks</p>
+                
+                <div class="tech-grid">
+                    <div class="tech-item">
+                        <div class="tech-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3>Deep Learning</h3>
+                        <p>Neural networks trained on millions of medical cases for accurate diagnosis</p>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon">
+                            <i class="fas fa-language"></i>
+                        </div>
+                        <h3>Natural Language Processing</h3>
+                        <p>Advanced NLP for understanding patient symptoms and medical history</p>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>Predictive Analytics</h3>
+                        <p>Machine learning algorithms that predict health trends and risks</p>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Security & Privacy</h3>
+                        <p>End-to-end encryption and HIPAA compliance for patient data protection</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>HealthSync 2040</h3>
+                    <p>Revolutionizing healthcare through AI innovation and human-centered design.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="dashboard.html">Dashboard</a></li>
+                        <li><a href="appointments.html">Book Appointment</a></li>
+                        <li><a href="doctors.html">AI Doctors</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p><i class="fas fa-envelope"></i> hello@healthsync2040.com</p>
+                    <p><i class="fas fa-phone"></i> +1 (555) 2040-HEALTH</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 HealthSync 2040. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="utils.js"></script>
+    <script src="script.js"></script>
+    <script src="doctors.js"></script>
+</body>
+</html> 

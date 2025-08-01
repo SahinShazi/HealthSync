@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Appointment - HealthSync 2040</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="appointments.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" href="favicon.svg">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-heartbeat"></i>
+                <span>HealthSync 2040</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+                <li><a href="appointments.html" class="nav-link active">Book Appointment</a></li>
+                <li><a href="doctors.html" class="nav-link">AI Doctors</a></li>
+                <li><a href="blog.html" class="nav-link">Blog</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Appointment Header -->
+    <section class="appointment-header">
+        <div class="container">
+            <div class="header-content">
+                <h1>Book Your AI Consultation</h1>
+                <p>Experience the future of healthcare with our advanced AI doctors</p>
+                <div class="appointment-stats">
+                    <div class="stat">
+                        <i class="fas fa-clock"></i>
+                        <span>24/7 Availability</span>
+                    </div>
+                    <div class="stat">
+                        <i class="fas fa-rocket"></i>
+                        <span>Instant Booking</span>
+                    </div>
+                    <div class="stat">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>100% Secure</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Appointment Form -->
+    <section class="appointment-form">
+        <div class="container">
+            <div class="form-container">
+                <div class="form-header">
+                    <h2>Schedule Your Consultation</h2>
+                    <p>Fill out the form below to book your AI doctor appointment</p>
+                </div>
+
+                <form id="appointmentForm" class="booking-form">
+                    <!-- Personal Information -->
+                    <div class="form-section">
+                        <h3><i class="fas fa-user"></i> Personal Information</h3>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="firstName">First Name *</label>
+                                <input type="text" id="firstName" name="firstName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name *</label>
+                                <input type="text" id="lastName" name="lastName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone">
+                            </div>
+                            <div class="form-group">
+                                <label for="dateOfBirth">Date of Birth *</label>
+                                <input type="date" id="dateOfBirth" name="dateOfBirth" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="gender">Gender</label>
+                                <select id="gender" name="gender">
+                                    <option value="">Select Gender</option>
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
+                                    <option value="other">Other</option>
+                                    <option value="prefer-not">Prefer not to say</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Appointment Details -->
+                    <div class="form-section">
+                        <h3><i class="fas fa-calendar-alt"></i> Appointment Details</h3>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="appointmentType">Consultation Type *</label>
+                                <select id="appointmentType" name="appointmentType" required>
+                                    <option value="">Select Consultation Type</option>
+                                    <option value="general">General Health Check</option>
+                                    <option value="cardiovascular">Cardiovascular Health</option>
+                                    <option value="respiratory">Respiratory Health</option>
+                                    <option value="mental-health">Mental Health</option>
+                                    <option value="nutrition">Nutrition & Diet</option>
+                                    <option value="fitness">Fitness & Exercise</option>
+                                    <option value="sleep">Sleep Analysis</option>
+                                    <option value="chronic">Chronic Disease Management</option>
+                                    <option value="preventive">Preventive Care</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="preferredDate">Preferred Date *</label>
+                                <input type="date" id="preferredDate" name="preferredDate" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="preferredTime">Preferred Time *</label>
+                                <select id="preferredTime" name="preferredTime" required>
+                                    <option value="">Select Time</option>
+                                    <option value="09:00">9:00 AM</option>
+                                    <option value="10:00">10:00 AM</option>
+                                    <option value="11:00">11:00 AM</option>
+                                    <option value="12:00">12:00 PM</option>
+                                    <option value="13:00">1:00 PM</option>
+                                    <option value="14:00">2:00 PM</option>
+                                    <option value="15:00">3:00 PM</option>
+                                    <option value="16:00">4:00 PM</option>
+                                    <option value="17:00">5:00 PM</option>
+                                    <option value="18:00">6:00 PM</option>
+                                    <option value="19:00">7:00 PM</option>
+                                    <option value="20:00">8:00 PM</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="timezone">Timezone *</label>
+                                <select id="timezone" name="timezone" required>
+                                    <option value="">Select Timezone</option>
+                                    <option value="UTC-8">Pacific Time (UTC-8)</option>
+                                    <option value="UTC-7">Mountain Time (UTC-7)</option>
+                                    <option value="UTC-6">Central Time (UTC-6)</option>
+                                    <option value="UTC-5">Eastern Time (UTC-5)</option>
+                                    <option value="UTC+0">UTC</option>
+                                    <option value="UTC+1">Central European Time (UTC+1)</option>
+                                    <option value="UTC+2">Eastern European Time (UTC+2)</option>
+                                    <option value="UTC+5:30">Indian Standard Time (UTC+5:30)</option>
+                                    <option value="UTC+8">China Standard Time (UTC+8)</option>
+                                    <option value="UTC+9">Japan Standard Time (UTC+9)</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- AI Doctor Selection -->
+                    <div class="form-section">
+                        <h3><i class="fas fa-robot"></i> Choose Your AI Doctor</h3>
+                        <div class="ai-doctors-grid">
+                            <div class="ai-doctor-card" data-doctor="dr-neural">
+                                <div class="doctor-avatar">
+                                    <i class="fas fa-brain"></i>
+                                </div>
+                                <div class="doctor-info">
+                                    <h4>Dr. Neural</h4>
+                                    <p>General Medicine & Diagnostics</p>
+                                    <div class="doctor-specialties">
+                                        <span>AI</span>
+                                        <span>ML</span>
+                                        <span>Neural Networks</span>
+                                    </div>
+                                    <div class="doctor-rating">
+                                        <i class="fas fa-star"></i>
+                                        <span>4.9/5.0</span>
+                                    </div>
+                                </div>
+                                <div class="doctor-status available">Available</div>
+                            </div>
+
+                            <div class="ai-doctor-card" data-doctor="dr-cardio">
+                                <div class="doctor-avatar">
+                                    <i class="fas fa-heart"></i>
+                                </div>
+                                <div class="doctor-info">
+                                    <h4>Dr. Cardio</h4>
+                                    <p>Cardiovascular Health</p>
+                                    <div class="doctor-specialties">
+                                        <span>Heart</span>
+                                        <span>Blood Pressure</span>
+                                        <span>ECG Analysis</span>
+                                    </div>
+                                    <div class="doctor-rating">
+                                        <i class="fas fa-star"></i>
+                                        <span>4.8/5.0</span>
+                                    </div>
+                                </div>
+                                <div class="doctor-status available">Available</div>
+                            </div>
+
+                            <div class="ai-doctor-card" data-doctor="dr-mind">
+                                <div class="doctor-avatar">
+                                    <i class="fas fa-psychology"></i>
+                                </div>
+                                <div class="doctor-info">
+                                    <h4>Dr. Mind</h4>
+                                    <p>Mental Health & Wellness</p>
+                                    <div class="doctor-specialties">
+                                        <span>Psychology</span>
+                                        <span>Anxiety</span>
+                                        <span>Depression</span>
+                                    </div>
+                                    <div class="doctor-rating">
+                                        <i class="fas fa-star"></i>
+                                        <span>4.7/5.0</span>
+                                    </div>
+                                </div>
+                                <div class="doctor-status available">Available</div>
+                            </div>
+
+                            <div class="ai-doctor-card" data-doctor="dr-nutri">
+                                <div class="doctor-avatar">
+                                    <i class="fas fa-apple-alt"></i>
+                                </div>
+                                <div class="doctor-info">
+                                    <h4>Dr. Nutri</h4>
+                                    <p>Nutrition & Diet</p>
+                                    <div class="doctor-specialties">
+                                        <span>Nutrition</span>
+                                        <span>Diet Plans</span>
+                                        <span>Supplements</span>
+                                    </div>
+                                    <div class="doctor-rating">
+                                        <i class="fas fa-star"></i>
+                                        <span>4.6/5.0</span>
+                                    </div>
+                                </div>
+                                <div class="doctor-status available">Available</div>
+                            </div>
+                        </div>
+                        <input type="hidden" id="selectedDoctor" name="selectedDoctor" required>
+                    </div>
+
+                    <!-- Health Information -->
+                    <div class="form-section">
+                        <h3><i class="fas fa-notes-medical"></i> Health Information</h3>
+                        <div class="form-group">
+                            <label for="symptoms">Primary Symptoms or Concerns *</label>
+                            <textarea id="symptoms" name="symptoms" rows="4" placeholder="Please describe your symptoms or health concerns..." required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="medicalHistory">Medical History</label>
+                            <textarea id="medicalHistory" name="medicalHistory" rows="3" placeholder="Any relevant medical history, medications, or allergies..."></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="emergencyContact">Emergency Contact</label>
+                            <input type="text" id="emergencyContact" name="emergencyContact" placeholder="Name and phone number">
+                        </div>
+                    </div>
+
+                    <!-- Preferences -->
+                    <div class="form-section">
+                        <h3><i class="fas fa-cog"></i> Preferences</h3>
+                        <div class="preferences-grid">
+                            <div class="preference-item">
+                                <input type="checkbox" id="videoCall" name="videoCall">
+                                <label for="videoCall">Video Call Consultation</label>
+                            </div>
+                            <div class="preference-item">
+                                <input type="checkbox" id="voiceCall" name="voiceCall">
+                                <label for="voiceCall">Voice Call Only</label>
+                            </div>
+                            <div class="preference-item">
+                                <input type="checkbox" id="textChat" name="textChat">
+                                <label for="textChat">Text Chat</label>
+                            </div>
+                            <div class="preference-item">
+                                <input type="checkbox" id="followUp" name="followUp">
+                                <label for="followUp">Schedule Follow-up</label>
+                            </div>
+                            <div class="preference-item">
+                                <input type="checkbox" id="healthReport" name="healthReport">
+                                <label for="healthReport">Generate Health Report</label>
+                            </div>
+                            <div class="preference-item">
+                                <input type="checkbox" id="prescription" name="prescription">
+                                <label for="prescription">Digital Prescription</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Submit Section -->
+                    <div class="form-submit">
+                        <div class="form-summary">
+                            <h4>Appointment Summary</h4>
+                            <div class="summary-item">
+                                <span>Consultation Type:</span>
+                                <span id="summaryType">Not selected</span>
+                            </div>
+                            <div class="summary-item">
+                                <span>AI Doctor:</span>
+                                <span id="summaryDoctor">Not selected</span>
+                            </div>
+                            <div class="summary-item">
+                                <span>Date & Time:</span>
+                                <span id="summaryDateTime">Not selected</span>
+                            </div>
+                        </div>
+                        <div class="submit-buttons">
+                            <button type="button" class="btn btn-secondary" onclick="resetForm()">
+                                <i class="fas fa-undo"></i>
+                                Reset Form
+                            </button>
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-calendar-check"></i>
+                                Book Appointment
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>HealthSync 2040</h3>
+                    <p>Revolutionizing healthcare through AI innovation and human-centered design.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="dashboard.html">Dashboard</a></li>
+                        <li><a href="appointments.html">Book Appointment</a></li>
+                        <li><a href="doctors.html">AI Doctors</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p><i class="fas fa-envelope"></i> hello@healthsync2040.com</p>
+                    <p><i class="fas fa-phone"></i> +1 (555) 2040-HEALTH</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 HealthSync 2040. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="utils.js"></script>
+    <script src="script.js"></script>
+    <script src="appointments.js"></script>
+</body>
+</html> 
