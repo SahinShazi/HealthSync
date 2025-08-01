@@ -1,0 +1,381 @@
+/* Doctors Page Specific Styles */
+
+/* Doctors Header */
+.doctors-header {
+    padding: 120px 0 3rem;
+    background: linear-gradient(135deg, var(--background-dark), var(--background-light));
+    border-bottom: 1px solid var(--border-color);
+}
+
+.header-content {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.header-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.header-content p {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+}
+
+.ai-stats {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+
+.ai-stats .stat {
+    text-align: center;
+}
+
+.ai-stats .stat-number {
+    font-family: 'Orbitron', monospace;
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.ai-stats .stat-label {
+    color: var(--text-secondary);
+    font-size: 1rem;
+}
+
+/* Doctors Grid */
+.doctors-grid {
+    padding: 4rem 0;
+}
+
+.doctors-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.doctor-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.doctor-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+}
+
+.doctor-card.featured {
+    border: 2px solid var(--primary-color);
+    background: linear-gradient(135deg, rgba(0, 212, 255, 0.05), rgba(124, 58, 237, 0.05));
+}
+
+.doctor-header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 2rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.doctor-avatar {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.doctor-avatar i {
+    font-size: 2rem;
+    color: white;
+}
+
+.doctor-info {
+    flex: 1;
+}
+
+.doctor-info h2 {
+    font-size: 1.8rem;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+}
+
+.doctor-title {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.doctor-rating {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.stars {
+    display: flex;
+    gap: 0.25rem;
+}
+
+.stars i {
+    color: var(--accent-color);
+    font-size: 0.9rem;
+}
+
+.doctor-rating span {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.doctor-status {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.5rem;
+}
+
+.status-badge {
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.status-badge.available {
+    background: rgba(16, 185, 129, 0.2);
+    color: var(--success-color);
+    border: 1px solid var(--success-color);
+}
+
+.response-time {
+    color: var(--text-secondary);
+    font-size: 0.8rem;
+}
+
+.doctor-body {
+    padding: 2rem;
+}
+
+.doctor-description {
+    margin-bottom: 2rem;
+}
+
+.doctor-description p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+.doctor-specialties {
+    margin-bottom: 2rem;
+}
+
+.doctor-specialties h3 {
+    color: var(--text-primary);
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.specialties-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.specialty {
+    padding: 0.5rem 1rem;
+    background: rgba(0, 212, 255, 0.1);
+    color: var(--primary-color);
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border: 1px solid rgba(0, 212, 255, 0.2);
+}
+
+.doctor-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.stat-item {
+    text-align: center;
+    padding: 1rem;
+    background: var(--background-dark);
+    border-radius: 15px;
+    border: 1px solid var(--border-color);
+}
+
+.stat-value {
+    font-family: 'Orbitron', monospace;
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: var(--primary-color);
+    margin-bottom: 0.25rem;
+}
+
+.stat-label {
+    color: var(--text-secondary);
+    font-size: 0.8rem;
+}
+
+.doctor-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.doctor-actions .btn {
+    flex: 1;
+    min-width: 150px;
+    justify-content: center;
+}
+
+/* AI Technology Section */
+.ai-technology {
+    padding: 4rem 0;
+    background: var(--background-light);
+}
+
+.tech-content {
+    text-align: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.tech-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+}
+
+.tech-content p {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    margin-bottom: 3rem;
+}
+
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.tech-item {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 20px;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+.tech-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+}
+
+.tech-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+}
+
+.tech-icon i {
+    font-size: 1.5rem;
+    color: white;
+}
+
+.tech-item h3 {
+    color: var(--text-primary);
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.tech-item p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    font-size: 1rem;
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .ai-stats {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .doctor-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .doctor-status {
+        align-items: center;
+    }
+
+    .doctor-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .doctor-actions {
+        flex-direction: column;
+    }
+
+    .tech-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-content h1 {
+        font-size: 2rem;
+    }
+
+    .doctor-avatar {
+        width: 60px;
+        height: 60px;
+    }
+
+    .doctor-avatar i {
+        font-size: 1.5rem;
+    }
+
+    .doctor-info h2 {
+        font-size: 1.5rem;
+    }
+
+    .doctor-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .specialties-grid {
+        justify-content: center;
+    }
+} 

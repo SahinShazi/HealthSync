@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealthSync 2040 - Test Page</title>
+    <link rel="icon" href="favicon.svg">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .test-section {
+            margin: 2rem 0;
+            padding: 2rem;
+            background: var(--card-bg);
+            border-radius: 15px;
+            border: 1px solid var(--border-color);
+        }
+        .test-button {
+            margin: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .test-button:hover {
+            background: var(--secondary-color);
+            transform: translateY(-2px);
+        }
+        .test-input {
+            width: 100%;
+            padding: 0.75rem;
+            margin: 0.5rem 0;
+            background: var(--background-light);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            color: var(--text-primary);
+        }
+        .test-result {
+            margin-top: 1rem;
+            padding: 1rem;
+            background: var(--background-light);
+            border-radius: 8px;
+            border-left: 4px solid var(--primary-color);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>HealthSync 2040 - Test Page</h1>
+        <p>This page tests all the fixes and improvements made to the application.</p>
+
+        <!-- Utility Functions Test -->
+        <div class="test-section">
+            <h2><i class="fas fa-tools"></i> Utility Functions Test</h2>
+            <button class="test-button" onclick="testUtils()">Test Utility Functions</button>
+            <div id="utils-result" class="test-result" style="display: none;"></div>
+        </div>
+
+        <!-- Form Validation Test -->
+        <div class="test-section">
+            <h2><i class="fas fa-check-circle"></i> Form Validation Test</h2>
+            <input type="email" id="test-email" class="test-input" placeholder="Enter email to test validation">
+            <input type="tel" id="test-phone" class="test-input" placeholder="Enter phone to test validation">
+            <button class="test-button" onclick="testValidation()">Test Validation</button>
+            <div id="validation-result" class="test-result" style="display: none;"></div>
+        </div>
+
+        <!-- Error Handling Test -->
+        <div class="test-section">
+            <h2><i class="fas fa-exclamation-triangle"></i> Error Handling Test</h2>
+            <button class="test-button" onclick="testErrorHandling()">Test Error Messages</button>
+            <button class="test-button" onclick="testSuccessMessages()">Test Success Messages</button>
+        </div>
+
+        <!-- Browser Compatibility Test -->
+        <div class="test-section">
+            <h2><i class="fas fa-globe"></i> Browser Compatibility Test</h2>
+            <button class="test-button" onclick="testBrowserCompatibility()">Test Browser Features</button>
+            <div id="compatibility-result" class="test-result" style="display: none;"></div>
+        </div>
+
+        <!-- Performance Test -->
+        <div class="test-section">
+            <h2><i class="fas fa-tachometer-alt"></i> Performance Test</h2>
+            <button class="test-button" onclick="testPerformance()">Test Performance Functions</button>
+            <div id="performance-result" class="test-result" style="display: none;"></div>
+        </div>
+
+        <!-- Navigation Test -->
+        <div class="test-section">
+            <h2><i class="fas fa-link"></i> Navigation Test</h2>
+            <a href="index.html" class="test-button">Go to Homepage</a>
+            <a href="dashboard.html" class="test-button">Go to Dashboard</a>
+            <a href="appointments.html" class="test-button">Go to Appointments</a>
+            <a href="doctors.html" class="test-button">Go to Doctors</a>
+            <a href="blog.html" class="test-button">Go to Blog</a>
+        </div>
+    </div>
+
+    <script src="utils.js"></script>
+    <script>
+        // Test Utility Functions
+        function testUtils() {
+            const result = document.getElementById('utils-result');
+            let output = '<h3>Utility Functions Test Results:</h3>';
+            
+            // Test DOM validation
+            output += `<p>✅ DOM Element Validation: ${HealthSyncUtils.isValidElement(document.body) ? 'Working' : 'Failed'}</p>`;
+            
+            // Test email validation
+            output += `<p>✅ Email Validation: ${HealthSyncUtils.validateEmail('test@example.com') ? 'Working' : 'Failed'}</p>`;
+            output += `<p>❌ Invalid Email: ${!HealthSyncUtils.validateEmail('invalid-email') ? 'Working' : 'Failed'}</p>`;
+            
+            // Test phone validation
+            output += `<p>✅ Phone Validation: ${HealthSyncUtils.validatePhone('+1234567890') ? 'Working' : 'Failed'}</p>`;
+            output += `<p>❌ Invalid Phone: ${!HealthSyncUtils.validatePhone('abc') ? 'Working' : 'Failed'}</p>`;
+            
+            // Test number formatting
+            output += `<p>✅ Number Formatting: ${HealthSyncUtils.formatNumber(1234567) === '1.2M' ? 'Working' : 'Failed'}</p>`;
+            
+            // Test browser compatibility
+            output += `<p>✅ IntersectionObserver: ${HealthSyncUtils.isIntersectionObserverSupported() ? 'Supported' : 'Not Supported'}</p>`;
+            output += `<p>✅ LocalStorage: ${HealthSyncUtils.isLocalStorageSupported() ? 'Supported' : 'Not Supported'}</p>`;
+            
+            result.innerHTML = output;
+            result.style.display = 'block';
+        }
+
+        // Test Form Validation
+        function testValidation() {
+            const email = document.getElementById('test-email').value;
+            const phone = document.getElementById('test-phone').value;
+            const result = document.getElementById('validation-result');
+            let output = '<h3>Validation Test Results:</h3>';
+            
+            // Test email validation
+            if (email) {
+                const isValidEmail = HealthSyncUtils.validateEmail(email);
+                output += `<p>${isValidEmail ? '✅' : '❌'} Email "${email}": ${isValidEmail ? 'Valid' : 'Invalid'}</p>`;
+                
+                if (!isValidEmail) {
+                    HealthSyncUtils.showError(document.getElementById('test-email'), 'Invalid email format');
+                } else {
+                    HealthSyncUtils.clearError(document.getElementById('test-email'));
+                }
+            }
+            
+            // Test phone validation
+            if (phone) {
+                const isValidPhone = HealthSyncUtils.validatePhone(phone);
+                output += `<p>${isValidPhone ? '✅' : '❌'} Phone "${phone}": ${isValidPhone ? 'Valid' : 'Invalid'}</p>`;
+                
+                if (!isValidPhone) {
+                    HealthSyncUtils.showError(document.getElementById('test-phone'), 'Invalid phone format');
+                } else {
+                    HealthSyncUtils.clearError(document.getElementById('test-phone'));
+                }
+            }
+            
+            if (!email && !phone) {
+                output += '<p>⚠️ Please enter email or phone to test validation</p>';
+            }
+            
+            result.innerHTML = output;
+            result.style.display = 'block';
+        }
+
+        // Test Error Handling
+        function testErrorHandling() {
+            const testInput = document.createElement('input');
+            testInput.type = 'text';
+            testInput.value = 'test';
+            document.body.appendChild(testInput);
+            
+            HealthSyncUtils.showError(testInput, 'This is a test error message');
+            
+            setTimeout(() => {
+                HealthSyncUtils.clearError(testInput);
+                document.body.removeChild(testInput);
+            }, 3000);
+        }
+
+        // Test Success Messages
+        function testSuccessMessages() {
+            HealthSyncUtils.showSuccess('This is a test success message!');
+        }
+
+        // Test Browser Compatibility
+        function testBrowserCompatibility() {
+            const result = document.getElementById('compatibility-result');
+            let output = '<h3>Browser Compatibility Test Results:</h3>';
+            
+            // Test various browser features
+            const features = {
+                'IntersectionObserver': 'IntersectionObserver' in window,
+                'LocalStorage': (() => {
+                    try {
+                        localStorage.setItem('test', 'test');
+                        localStorage.removeItem('test');
+                        return true;
+                    } catch (e) {
+                        return false;
+                    }
+                })(),
+                'Clipboard API': navigator.clipboard && window.isSecureContext,
+                'CSS Grid': CSS.supports('display', 'grid'),
+                'CSS Flexbox': CSS.supports('display', 'flex'),
+                'CSS Custom Properties': CSS.supports('--test', 'value'),
+                'Backdrop Filter': CSS.supports('backdrop-filter', 'blur(10px)')
+            };
+            
+            for (const [feature, supported] of Object.entries(features)) {
+                output += `<p>${supported ? '✅' : '❌'} ${feature}: ${supported ? 'Supported' : 'Not Supported'}</p>`;
+            }
+            
+            result.innerHTML = output;
+            result.style.display = 'block';
+        }
+
+        // Test Performance Functions
+        function testPerformance() {
+            const result = document.getElementById('performance-result');
+            let output = '<h3>Performance Test Results:</h3>';
+            
+            // Test debounce
+            let debounceCount = 0;
+            const debouncedFunction = HealthSyncUtils.debounce(() => {
+                debounceCount++;
+            }, 100);
+            
+            // Call multiple times quickly
+            for (let i = 0; i < 10; i++) {
+                debouncedFunction();
+            }
+            
+            setTimeout(() => {
+                output += `<p>✅ Debounce Function: ${debounceCount === 1 ? 'Working' : 'Failed'} (called ${debounceCount} times)</p>`;
+                
+                // Test throttle
+                let throttleCount = 0;
+                const throttledFunction = HealthSyncUtils.throttle(() => {
+                    throttleCount++;
+                }, 100);
+                
+                // Call multiple times quickly
+                for (let i = 0; i < 10; i++) {
+                    throttledFunction();
+                }
+                
+                setTimeout(() => {
+                    output += `<p>✅ Throttle Function: ${throttleCount <= 2 ? 'Working' : 'Failed'} (called ${throttleCount} times)</p>`;
+                    result.innerHTML = output;
+                    result.style.display = 'block';
+                }, 200);
+            }, 200);
+        }
+
+        // Initialize page
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('HealthSync 2040 Test Page Loaded');
+            console.log('HealthSyncUtils available:', typeof HealthSyncUtils !== 'undefined');
+        });
+    </script>
+</body>
+</html> 
